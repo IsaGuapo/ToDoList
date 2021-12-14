@@ -3,8 +3,7 @@ import './App.css';
 import Footer from './components/Footer/'
 import Header from './components/Header/';
 import Main from './components/Main/';
-import Item from './components/Itemlist/Item';
-import Itemlist from './components/Itemlist/Itemlist';
+
 
 import {BrowserRouter} from 'react-router-dom';
 

@@ -7,16 +7,16 @@ export class Item extends Component {
         super(props)
     
         this.state = {
-            supplier: this.props.info.asignee || "Isa" 
+            assignee: this.props.info.assignee || "Isa" 
         }
     }
     
     render() {
-        const {name,date,asignee} = this.props.info
+        const {name,date,assignee} = this.props.info
 
         return (
             <div>
-                <p>Tarea:{name}, Fecha:{date} Asignada a : {this.state.asignee}</p>
+                <p>Tarea:{name}, con Fecha:{date}, Asignada a : {this.state.assignee}</p>
                 <button onClick={this.props.delete}> Borrar</button>
             </div>
         )

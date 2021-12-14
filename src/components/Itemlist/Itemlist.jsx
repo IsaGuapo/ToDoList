@@ -52,22 +52,31 @@ class Itemlist extends Component {
   }
   
   render() {
+    const name =  this.state.lastAdded.name
+    const date = this.state.lastAdded.date
+    const assignee = this.state.lastAdded.assignee
+
     return <div>
       <h1>To Do List </h1>
 
       <h4>Crear una nueva tarea</h4>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="name">Tarea:</label><br/>
-                    <input type="text" name="name" ref={this.name}/><br/>
+                    <input type="text" name="name" id="name" /><br/>
 
                     <label htmlFor="date">Fecha:</label><br/>
-                    <input type="date" name="date" /><br/>
+                    <input type="date" name="date" id="date" /><br/>
 
                     <label htmlFor="assignee">Responsable:</label><br/>
-                    <input type="text" name="assignee" /><br/>
+                    <input type="text" name="assignee" id="assignee"/><br/>
                     <input type="submit" />
                   
                 </form>
+                
+                {this.paintTask()}
+                 <button onClick={this.deleteAllProducts}>Borrar Todo </button>
+                 <button onClick={this.createTask}>Crear</button>
+                 <h5>Última tarea creada  : {name} con fecha {date} realizada por {assignee}</h5>
       </div>;
   }
 }
