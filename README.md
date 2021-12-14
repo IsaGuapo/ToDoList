@@ -68,3 +68,58 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+**************************************************************************
+Crea una TODO list que contenga lo siguiente:
+
+Un formulario con input + botón
+Un componente List que recorra listas de items
+Un componente Item o Card que contenga cada TO DO
+Botón CLEAR para borrar todas las tareas
+Botón BORRAR, asociado a cada tarea, para poder borrar de manera independiente
+Botón para hacer RESET de las tareas
+Dar estilo CSS a los componentes con lo visto en clase para practicar
+
+Flujo de la aplicación:
+
+Nada más empezar tendremos un input y un botón. El botón tendrá el texto ADD
+Si hemos escrito algo en el input y hacemos click sobre el botón ADD, se añadirá un item debajo del input.
+Cuando un item sea añadido, se borrará inmediatamente lo que habíamos escrito en el input.
+Se debe hacer una precarga de tareas de un JSON de datos
+El botón de RESET mostrará de nuevo sólo las tareas obtenidas de la precarga de datos
+TIP: usad el paquete de NPM UUID para manejar las keys de los diferentes elementos de la lista.
+
+UUID
+Sobre formularios
+
+PASOS A SEGUIR
+1. <npx create-react-app project-name>
+2. <npm install --save-dev create-react-component-folder>Esto permite crear componentes en el proyecto
+3. Crear una carpeta components dentro de src
+4. Dentro de la carpeta src/components :  <npx crcf <myComponent>  -j > en este caso: npx crcf Footer Header Nav Main Item Itemlist  -j 
+5. Ahora tenemos que enlazar unas carpetas con otras. En App.js importamos los modulos de los componentes creados, Footer, Header...
+6. <npm install react-router-dom> Para usar React Router, primero debe instalarlo usando NPM . Con esto podremos trabajar el enrutamiento.
+7. En App.js "pintamos las nutas" que va a tener nuestra app. Es importante importar lo siguiente :
+<import {BrowserRouter} from 'react-router-dom';> 
+8. Como queremos tener dos vistas . Una Home y otra para Weather crearemos dentro de src/components una carpeta para cada uno : <npx crcf Home Weather -j>
+9. En Nav importamos LINK <import {Link} from 'react-router-dom';> Y creamos una lista de navegacion ul
+    <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/todo">ToDo</Link></li>
+        <li><Link to="/weather">Wheather</Link></li>
+      </ul>
+    </nav>;
+10. En main va el enrutado de mi app. En este caso Home, Weather
+
+Estrucutra de la App
+
+Componentes: 
+- *HEADER (NAV)
+- *MAIN 
+    - **HOME (Welcome) 
+    - **ITEMLIST (FORM con un input + boton "ADD")
+        - ***ITEM 
+        - ***ITEM  
+        - ***...
+    - **WEATHER (Api de clima)
+- *FOOTER  
