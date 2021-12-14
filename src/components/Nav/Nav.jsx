@@ -8,7 +8,7 @@ class Nav extends Component {
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/itemlist">ItemsList</Link></li>
-        <li><Link to="/weather">Weather</Link></li>
+        <li><Link to="/weatherlist">Weatherlist</Link></li>
       </ul>
     </nav>;
   }

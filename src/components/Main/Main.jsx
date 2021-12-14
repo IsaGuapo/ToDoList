@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Route, Routes } from 'react-router-dom'//Para uso de todas las rutas
 import Home from '../Home';
 import ItemList from '../Itemlist';
-import Weather from '../Weather'
+import Weatherlist from '../Weatherlist'
 
 
 class Main extends Component {
@@ -12,7 +12,7 @@ class Main extends Component {
       <Routes>
           <Route path="/" element ={<Home/>} exact />
           <Route path="/itemList" element ={<ItemList/>} />
-          <Route path="/weather" element ={<Weather/>} />
+          <Route path="/weatherlist" element ={<Weatherlist/>} />
        
       </Routes>  
   </main>
